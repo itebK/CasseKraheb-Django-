@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+{% load crispy_forms_tags %}
+{% block title %}Inscription | CasseKraheb{% endblock %}
+{% block content %}
+    <div class="container">
+        <div class="row">
+            <div
+                    class="col-lg-6 col-lg-offset-3 col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2 col-xs-12">
+                <div class="bloc-connexion well">
+                    <form class="form-horizontal" method="POST" action="{% url 'edit_profile' %}" enctype="multipart/form-data">{% csrf_token %}
+                        <div class="container-fluid">
+
+                            <h3 class="text-center">Profile</h3>
+
+
+
+                            <div class="form-group label-floating">
+                                <label class="control-label" for="Pseudo">Pseudo</label>
+                                {{ user.username }}
+                            </div>
+
+                            <div class="form-group label-floating">
+                                <label class="control-label" for="email">Email</label>
+                                {{ user.Email }}
+                            </div>
+
+                            <div class="form-group label-floating">
+                                <label class="control-label" for="password">Mot de passe</label>
+                                {{ user.password }}
+                            </div>
+
+                            <div class="form-group label-floating">
+                                <label class="control-label" for="telephone">Téléphone</label>
+                                <input class="form-control" >
+
+                            </div>
+
+
+                            <div class="form-group pull-right">
+                                <button type="submit" class="btn btn-raised btn-success">Sauvegarder</button>
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

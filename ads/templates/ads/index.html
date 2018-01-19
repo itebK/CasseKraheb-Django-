@@ -1,0 +1,90 @@
+{% extends "base.html" %} {% block content %}
+    <div class="header">
+        <div class="container-fluid">
+
+            <div class="row">
+                <div class="col-md-12 text-center">
+                    <div class="text-header-container">
+                        <h1 class="text-header">Trouvez vos piéces détachées
+                            d'occasion sur CasseKraheb</h1>
+                        <h2>Le réseau tunisien des super casse voiture</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="separator success">
+        <div class="container-fluid text-center">
+            <div class="row">
+                <div class="col-md-12">
+                    <h3 class="">Rechercher des annonces</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    {% include "ads/filtre.html" %}
+
+    <div class="marque-container text-center" style="position: relative;">
+        <div class="container text-center img-marque">
+            <div class="row">
+
+                <!-- boucle -->
+                {{ obj.zones }} {% for marque in marques %}
+                <div class="col-md-2 col-sm-3 col-xs-2">
+
+                    {% load static %} <img width="90px" id="{{ marque.libelle }}"
+                                           height="auto" class="img-rounded"
+                                           src="{% static '/img/marque/' %}{{ marque.image }}"
+                                           alt="{{ marque.libelle }}"/> <span>{{ marque.libelle }}</span>
+
+                </div>
+            {% endfor %}
+
+                <!-- end boucle -->
+
+
+            </div>
+
+        </div>
+
+
+        <div class="container text-center img-zone hidden">
+            <div class="row">
+
+                <!-- boucle -->
+                {% for zone in zones %}
+                    <div class="col-md-3 col-sm-3 col-xs-2">
+
+                        {% load static %} <img id="{{ zone.libelle }}"
+                                               class="img-rounded"
+                                               src="{% static '/img/zone/' %}{{ zone.image }}"
+                                               alt="{{ zone.libelle }}"/> <span>{{ zone.libelle }}</span>
+
+                    </div>
+                {% endfor %}
+
+                <!-- end boucle -->
+
+
+            </div>
+
+        </div>
+
+        <div class="container text-center img-modele hidden"></div>
+
+        <div class="container text-center liste-pieces hidden">
+            <div class="col-md-4 col-md-offset-4">
+                <input id="filter" type="text" class="form-control" placeholder="filtrer la resultat...">
+                <table class="table table-striped table-hover searchable">
+
+                </table>
+            </div>
+        </div>
+
+        <a href="javascript:void(0)" class="btn btn-danger btn-fab hidden"><i
+                class="glyphicon glyphicon-remove"></i></a>
+    </div>
+
+
+{% endblock %}

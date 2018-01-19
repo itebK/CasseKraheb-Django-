@@ -1,0 +1,132 @@
+/*STANDARDS****************************/
+::selection {
+	background: #4caf50;
+	color: #fff;
+}
+
+body::-webkit-scrollbar {
+    width: 5px;
+}
+ 
+body::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+}
+ 
+body::-webkit-scrollbar-thumb {
+  background-color: #4caf50;
+  outline: 1px solid #4caf50;
+}
+
+html {
+	width: 100%;
+	height: 100%;
+}
+
+body {
+	margin: 0;
+}
+
+.navbar, .navbar.navbar-default {
+	background-color: #522b1b;
+}
+
+.navbar {
+	margin-bottom: 0px;
+}
+
+.success {
+	background-color: #4caf50;
+	color: white;
+}
+
+/*HOME PAGE*****************************/
+.header {
+	height: 70vh;
+	background: no-repeat center center fixed url("../img/home-car.jpg");
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+
+.text-header-container {
+	background-color: rgba(0, 0, 0, 0.56);
+	height: 200px;
+	color: white;
+	padding: 30px 0 30px 0;
+	margin: 100px auto 0 auto;
+}
+
+.text-header {
+	color: white;
+}
+
+.separator h3 {
+	margin: 20px 0 20px 0;
+}
+
+.filtre-container{
+	background-color : white;
+	margin : 0;
+	padding : 10px 0 10px 0;
+}
+
+.btn-filter {
+	background-color: #522b1b !important;
+	color: white !important;
+}
+
+.marque-container {
+	margin : 20px 0 20px 0;
+	min-height : 200px;
+}
+
+.marque-container .col-md-3{
+	margin : 10px 0 20px 0;
+}
+
+.marque-container img{
+	width : auto;
+	height : 90px;
+	cursor: pointer;
+}
+
+
+
+.marque-container span{
+	display : block;
+	margin : 10px 0 20px 0;
+}
+
+.marque-container .btn-fab{
+	position: absolute;
+    top: 0;
+    left: 20px;
+    transition: all .5s;
+    -moz-transition: all .5s;
+    -webkit-transition: all .5s;
+}
+
+.marque-container .btn-fab:hover, .marque-container .btn-fab:active, .marque-container .btn-fab:focus{
+	background-color : #f95347 !important;
+}
+
+.btn-fab .glyphicon{
+	top:16px;
+}
+
+.liste-pieces table tr{
+	cursor : pointer;
+}
+
+/*ACCOUNT*******************************/
+.bloc-connexion {
+	margin-top: 70px;
+	padding: 10px 30px 0 30px !important;
+}
+
+.lien-inscription a {
+	line-height: 50px;
+}
+
+/*ADS***********************************/
